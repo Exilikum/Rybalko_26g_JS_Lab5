@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.products {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.products img {
+    max-width: 100px; /* Обмеження максимального розміру зображення */
+    height: auto;
+    border: 1px solid #ccc; /* Обведення квадратом */
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 10px; /* Закруглення бордерів */
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1.1em;
+    color: black;
+    margin: 5px 0;
+}
+
+.product-details {
+    font-size: 0.9em;
+    color: gray;
+    margin: 5px 0 15px 0; /* Відступ між назвою та характеристиками */
+}
+
+.cart {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items, .cart-summary {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    width: 80px; /* Збільшуємо розмір зображення в кошику */
+    height: 80px;
+    margin-right: 10px;
+    border: 1px solid #ccc; /* Обведення квадратом */
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 10px; /* Закруглення бордерів */
+}
+
+.cart-summary {
+    text-align: left;
+}
+
+.add-to-cart {
+    background-color: #007bff; /* Синій фон */
+    color: #fff;
+    border: none;
+    padding: 5px 10px; /* Зменшуємо розмір кнопки */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.add-to-cart:hover {
+    transform: scale(1.05);
+}
+
+#apply-promocode {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#proceed-to-checkout, #continue-shopping {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+#continue-shopping {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+}
+
+#proceed-to-checkout:hover, #continue-shopping:hover {
+    transform: scale(1.05);
+}
+
+.cart-item p {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.cart-item .quantity-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; /* Обведення рамкою */
+    padding: 5px;
+    background-color: #fff; /* Зміна фону на білий */
+    border-radius: 10px; /* Закруглення бордерів */
+    margin-right: 20px; /* Зсув кількості товару вправо */
+}
+
+.cart-item button {
+    margin: 0;
+    padding: 0;
+    width: 30px; /* Зменшення розміру квадрату */
+    height: 30px;
+    background: none; /* Прибираємо білий фон */
+    border: none; /* Прибираємо бордери */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart-item button img {
+    width: 20px;  /* Збільшуємо розмір значка смітника */
+    height: 20px;
+    border: none;
+    background: none;
+}
+
+input#promocode {
+    width: calc(100% - 90px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.promo-note {
+    color: gray;
+    font-size: 0.8em;
+}
+
+#info {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.info-circle {
+    border: 1px solid blue;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border-top: 1px dotted #ccc;
+}
+
+hr.before-promocode {
+    margin-bottom: 20px;
+}
+
+.quantity {
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+    padding: 5px;
+}

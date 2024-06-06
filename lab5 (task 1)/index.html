@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="products">
+            <h2>Available Products</h2>
+            <div class="product" data-id="1" data-name="AirPods Max" data-price="549.00" data-stock="5" data-color="Sky Blue">
+                <img src="https://newtime.ua/image/import/catalog/zvuk/apple/Apple-AirPods-Max/Apple-AirPods-Max-Sky-Blue-(MGYL3)/Apple-AirPods-Max-Sky-Blue-(MGYL3)-1.webp" alt="AirPods Max">
+                <div class="product-info">
+                    <p class="product-name">AirPods Max - $549.00</p>
+                    <p class="product-details">Sky Blue</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-name="MacBook Pro 14"" data-price="2599.00" data-stock="3" data-color="Space Gray" data-ram="32GB" data-storage="1TB">
+                <img src="https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111339_sp818-mbp13touch-silver-select-202005.png" alt="MacBook Pro 14">
+                <div class="product-info">
+                    <p class="product-name">MacBook Pro 14" - $2599.00</p>
+                    <p class="product-details">Space Gray, 32GB, 1TB</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3" data-name="iPad Air" data-price="899.00" data-stock="7" data-color="Pink" data-storage="256GB" data-connectivity="Cellular">
+                <img src="https://hotline.ua/img/tx/438/4388380045.jpg" alt="iPad Air">
+                <div class="product-info">
+                    <p class="product-name">iPad Air - $899.00</p>
+                    <p class="product-details">Pink, 256GB, Cellular</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4" data-name="iPhone 13 Pro Max" data-price="1599.00" data-stock="4" data-color="Alpine Green" data-storage="1TB">
+                <img src="https://skymarket.ua/image/cache/catalog/telefony/Apple/smartfon-apple-iphone-13-pro-256gb-gold-(mlvk3)-800x800.jpg" alt="iPhone 13 Pro Max">
+                <div class="product-info">
+                    <p class="product-name">iPhone 13 Pro Max - $1599.00</p>
+                    <p class="product-details">Alpine Green, 1TB</p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <div class="cart-items">
+                <!-- Товари будуть динамічно додані сюди -->
+            </div>
+            <div class="cart-summary">
+                <hr class="before-promocode">
+                <input type="text" id="promocode" placeholder="Promocode">
+                <button id="apply-promocode">Apply</button>
+                <p class="promo-note">20% off discount</p>
+                <p>Subtotal: $<span id="subtotal">0.00</span></p>
+                <p>Discount: $<span id="discount">0.00</span></p>
+                <p>Tax: $<span id="tax">0.00</span> <button id="info" class="info-circle">i</button></p>
+                <div id="info-tooltip" class="tooltip">This is the tax information</div>
+                <hr>
+                <p>Total: $<span id="total">0.00</span></p>
+                <button id="proceed-to-checkout">Proceed to Checkout</button>
+                <button id="continue-shopping">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
